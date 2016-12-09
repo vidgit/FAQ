@@ -9,6 +9,6 @@ public class ExcelSheetCol {
         return val;
     }
     public static void main(String[] args) {
-        System.out.println(titleToNumber("AAA"));
+        System.out.println(titleToNumber("BAQTZ"));
     }
 }
