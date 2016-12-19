@@ -20,6 +20,16 @@ A = 3, B = 4
 
  */
 
+/*
+    sum=1+2+3+4+...+n 
+    sum1=sum-missing+repeat
+    diff = sum1-sum=repeat-missing
+    sq_sum= 1^2+2^2+3^2+...+n^2
+    sq_sum1=sq_sum-missing^2+repeat^2
+    sq_sum1-sq_sum=repeat^2-missing^2
+    plus = sq_sum1-sq_sum/diff
+    
+ */
 import java.io.*;
 import java.util.*;
 

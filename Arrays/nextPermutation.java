@@ -1,3 +1,21 @@
+/*
+Next Permutation
+Implement the next permutation, which rearranges numbers into the numerically next greater permutation of numbers.
+
+If such arrangement is not possible, it must be rearranged as the lowest possible order ie, sorted in an ascending order.
+
+The replacement must be in-place, do not allocate extra memory.
+
+Examples:
+
+1,2,3 → 1,3,2
+
+3,2,1 → 1,2,3
+
+1,1,5 → 1,5,1
+
+20, 50, 113 → 20, 113, 50
+ */
 import java.util.*;
 
 public class nextPermutation {
@@ -14,12 +32,12 @@ public class nextPermutation {
         
         int i = 0;
         int n = A.size();
-        
+        //find if value of current is less than current+1
         for (i = n - 2; i >= 0; i--) {
             if (A.get(i) < A.get(i + 1))
                 break;
         }
-        
+        //return if in descending order
         if (i == -1)
             return false;
        
