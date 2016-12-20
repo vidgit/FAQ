@@ -3,4 +3,5 @@ Count and Say
 Concentricectangular
 NoOfDuplicates
 MaxDistance
+SquareRoot
 
