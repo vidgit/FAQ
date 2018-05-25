@@ -1,47 +1,17 @@
+
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.math.BigInteger;
 
-public class VeryBigSum {
+public class VeryBigSum{
+    public static void main(String[] args)throws IOException {
+        int n = IOV.readInt();
+        BigInteger sum = BigInteger.valueOf(0);
 
-    // Complete the aVeryBigSum function below.
-    static long aVeryBigSum(long[] ar) {
-        BigInteger sum = BigInteger.valueOf(ar[0]);
-        for(int i=1;i<ar.length;i++){
-            sum=sum.add(BigInteger.valueOf(ar[i]));
-        }
-        return sum.longValue();
-    }
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        int arCount = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        long[] ar = new long[arCount];
-
-        String[] arItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int i = 0; i < arCount; i++) {
-            long arItem = Long.parseLong(arItems[i]);
-            ar[i] = arItem;
+        while(n-->0)
+        {
+            sum= sum.add(BigInteger.valueOf(readInt()));
         }
 
-        long result = aVeryBigSum(ar);
-
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
-
-        scanner.close();
+        System.out.println(sum);
     }
 }
